@@ -37,13 +37,11 @@ public class TokenProvider {
                 .signWith(SignatureAlgorithm.HS512, this.secretKey).setExpiration(validity).compact();
     }
 
-  public Authentication getAuthentication(String token) {
-    String username = Jwts.parser().setSigningKey(this.secretKey).parseClaimsJws(token)
-        .getBody().getSubject();
-    UserDetails userDetails = this.userService.loadUserByUsername(username);
+    public Authentication getAuthentication(String token) {
+        String username = Jwts.parser().setSigningKey(this.secretKey).parseClaimsJws(token).getBody().getSubject();
+        UserDetails userDetails = this.userService.loadUserByUsername(username);
 
-    return new UsernamePasswordAuthenticationToken(userDetails, "",
-        userDetails.getAuthorities());
-  }
+        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
+    }
 
-}©2019 GitHub,Inc.
+}
