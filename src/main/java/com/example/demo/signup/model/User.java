@@ -48,4 +48,12 @@ public class User {
         this.password = passwordEncoder.encode(this.password);
     }
 
+	public boolean isPresent() {
+		return false;
+	}
+
+	public User get() {
+		return null;
+	}
+
 }

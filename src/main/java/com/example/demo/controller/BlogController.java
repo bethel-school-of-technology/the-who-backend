@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.Post;
-import com.example.demo.model.User;
+import com.example.demo.signup.model.User;
 import com.example.demo.service.PostService;
 import com.example.demo.service.UserService;
 import com.example.demo.util.Pager;
@@ -33,7 +33,7 @@ public class BlogController {
                                   @RequestParam(defaultValue = "0") int page,
                                   Model model) {
 
-        Optional<User> optionalUser = userService.findByUsername(username);
+        User optionalUser = userService.findByUsername(username);
 
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();

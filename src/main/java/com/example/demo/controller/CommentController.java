@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.model.Comment;
 import com.example.demo.model.Post;
-import com.example.demo.model.User;
+import com.example.demo.signup.model.User;
 import com.example.demo.service.CommentService;
 import com.example.demo.service.PostService;
 import com.example.demo.service.UserService;
@@ -55,7 +55,7 @@ public class CommentController {
         Optional<Post> post = postService.findForId(id);
 
         if (post.isPresent()) {
-            Optional<User> user = userService.findByUsername(principal.getName());
+            User user = userService.findByUsername(principal.getName());
 
             if (user.isPresent()) {
                 Comment comment = new Comment();

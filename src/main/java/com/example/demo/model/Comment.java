@@ -18,7 +18,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.example.demo.model.Post;
-import com.reljicd.model.User;
+import com.example.demo.signup.model.User;
 
 @Entity
 @Table(name = "comment")
