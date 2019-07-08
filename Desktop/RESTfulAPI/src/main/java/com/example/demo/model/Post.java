@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.example.demo.model.Comment;
-import com.example.demo.model.User;
+import com.example.demo.signup.model.User;
 
 @Entity
 @Table(name = "post")
@@ -100,6 +100,4 @@ public class Post {
     public void setComments(Collection<Comment> comments) {
         this.comments = comments;
     }
-}
-
 }

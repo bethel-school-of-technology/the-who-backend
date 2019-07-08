@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.data.domain.Page;
 
 import com.example.demo.model.Post;
-import com.example.demo.model.User;
+import com.example.demo.signup.model.User;
 
 public interface PostService {
 

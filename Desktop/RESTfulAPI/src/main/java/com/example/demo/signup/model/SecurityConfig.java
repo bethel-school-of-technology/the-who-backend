@@ -11,6 +11,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.example.demo.signup.model.JWTFilter;
 import com.example.demo.signup.model.TokenProvider;
 
+
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 

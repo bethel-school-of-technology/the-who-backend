@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.model.Post;
-import com.example.demo.model.User;
+import com.example.demo.signup.model.User;
 import com.example.demo.service.PostService;
 import com.example.demo.service.UserService;
 
@@ -34,7 +34,7 @@ public class PostController {
     public String newPost(Principal principal,
                           Model model) {
 
-        Optional<User> user = userService.findByUsername(principal.getName());
+        User user = userService.findByUsername(principal.getName());
 
         if (user.isPresent()) {
             Post post = new Post();
