@@ -7,5 +7,5 @@ import com.example.demo.signup.model.User;
 public interface UserService {
     void save(User user);
 
-    Optional<User> findByUsername(String username);
+    User findByUsername(String username);
 }
